@@ -1,0 +1,95 @@
+/* Botón de hamburguesa */
+.menu-toggle {
+   
+    background: transparent;
+    border: none;
+
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 20px;
+    font-size: 20px;
+  }
+
+  .menu-toggle:hover {
+    transform: scale(1.1);
+  }
+
+ 
+
+  /* Menú de opciones */
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #5B00BF; /* Color de fondo del menú */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap: .4rem;
+  }
+
+  .menu ul li {
+
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: background 0.3s ease, transform 0.3s ease;
+    border-radius: 10px;
+  }
+
+  /* Animación hover en los enlaces del menú */
+  .menu ul li a:hover {
+    background: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente */
+    transform: translateY(-5px); /* Efecto de elevación */
+  }
+
+  /* Botón de cerrar */
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .close-btn:hover {
+    transform: scale(1.1);
+  }
+
+  /* Clase para mostrar el menú */
+  .menu.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu.active ul li {
+    transform: scale(1);
+    opacity: 1;
+    transition-delay: calc(0.1s * var(--i));
+  }

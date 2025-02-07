@@ -1,0 +1,46 @@
+/* Layout para dispositivos entre 350px y 600px */
+@media (min-width: 350px) and (max-width: 756px) {
+.services-pfm {
+        padding: 1.875rem 6% 7.5rem 6%;
+        position: absolute;
+        top: 0;
+        left:0;
+        z-index: 3;
+        height: auto;
+        transition: all 1s ease;
+    }
+.services-pfm div.tittle{
+    display: none;
+}
+.services-pfm .span-hero{
+    display: none;
+}
+.services-pfm .services-container {
+    grid-template-columns: 1fr  1fr;
+    gap:0
+
+}
+.services-pfm .service-card{
+    border: none;
+    border-radius: 0;
+    text-align: center;
+}
+.services-pfm .service-card p{
+    display: none;
+}
+.services-pfm .service-card h3{
+    font-size: 1rem;
+    font-weight: 300;
+}
+.services-pfm .service-card button{
+    display: none;
+}
+.atras{
+    font-size: 2rem;
+    color: aliceblue;
+}
+.cerrar-panel{
+    font-size: 2rem;
+    color: aliceblue;
+}
+}

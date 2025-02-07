@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-size: 100%;
+}
+.container{
+    display:grid;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 20% 55% 25%;
+    grid-template-rows: auto;
+    position:fixed;
+    top:0;
+    left: 0;
+    z-index: 1;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+}
+
+
+.hero
+{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 2.75rem;
+    height: auto;
+}
+
+.about,
+.feedback,
+.contact
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.75rem;
+    height: auto;
+    padding: 7.5rem 0;
+}
+
+.bento{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(10, auto);
+    padding: 7.5rem 14%;
+    gap: 1.2rem;
+    width: auto;
+    height: auto;
+}
+
+.bento div{
+    border-radius: 0.425rem;
+    place-content: center;
+    
+}
+
+.bento .item-1{
+    grid-column: 1/5;
+    grid-row: 1/2;
+}
+.bento .item-2{
+    grid-column: 1/2;
+    grid-row: 2/6;
+}
+.bento .item-3{
+    grid-column: 1/2;
+    grid-row: 6/10;
+}
+.bento .item-4{
+    grid-column: 2/4;
+    grid-row: 2/5;
+}
+.bento .item-5{
+    grid-column: 2/3;
+    grid-row: 5/8;
+}
+.bento .item-6{
+    grid-column: 2/3;
+    grid-row: 8/10;
+}
+.bento .item-7{
+    grid-column: 4/5;
+    grid-row: 2/8;
+}
+.bento .item-8{
+    grid-column: 3/4;
+    grid-row: 5/8;
+}
+.bento .item-9{
+    grid-column: 3/5;
+    grid-row: 8/10;
+
+}
+
+.bento .item-10{
+    grid-column: 1/5;
+    grid-row: 10/11;
+
+}
+
+
+
+.contact{
+    padding: 10.5rem 20%;
+    display: grid;
+    height: 90vh;
+
+}
+
+.left-contact{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:1.875rem;
+    padding-left: 5rem;
+}
+
+.left-contact div{
+    background-color: white;
+}
+
+.feedback{
+    padding: 7.5rem 20%;
+    display: grid;
+    gap:5.75rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+.footer{
+    display: grid;
+    grid-template-columns:  3fr 2fr 1fr;
+    padding: 14.5rem 14%;
+    gap: 1.875rem;
+}

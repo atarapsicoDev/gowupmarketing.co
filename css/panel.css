@@ -1,0 +1,198 @@
+.services{
+    padding: 7.5rem 10%;
+
+}
+
+.services .tittle{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-bottom: 3.75rem;
+    gap: 2rem;
+    color:#fff;
+}
+
+.services .tittle div{
+    margin-top: 30px;
+    display: grid;
+    gap: 2rem;
+}
+
+
+.services .tittle div:nth-child(2){
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.services h2{
+
+    color:#fff;
+    padding-right: 2.75rem;
+}
+
+.services-container {
+    display: grid;
+    gap: 1.875rem; /* Aumentar el gap entre las tarjetas */
+    grid-template-columns: 1fr; /* Por defecto en móvil */
+}
+
+/* Estilo general para cada card */
+.service-card {
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    padding: 1.25rem;
+    text-decoration: none;
+    border: none;
+    
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+}
+
+.service-card img {
+    width: 100px; /* Iconos más grandes */
+    height: 100px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.service-card img:hover {
+    transform: scale(1.1);
+}
+
+.service-card h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.service-card p {
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.service-card button {
+    background: transparent; /* Sin fondo */
+    border: none; /* Sin borde */
+    box-shadow: none; /* Sin sombra */
+    color: rgb(255 255 255 /.4);
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    align-items: center;
+  
+}
+
+.service-card button span {
+    font-size: 1rem;
+    height: 100%;
+    align-items: self-start
+    
+}
+
+.service-card button:hover {
+    color: rgb(255 255 255 /.8);
+  
+}
+
+/* Animación de la flecha al hacer hover */
+.service-card button .bx {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.service-card button:hover .bx {
+    transform: translateX(5px);
+  
+}
+
+/* Layout para dispositivos móviles */
+@media (max-width: 350px) {
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    .services .tittle{
+        grid-template-columns:1fr;
+    }
+    .services h2{
+        padding-right:0;
+    }
+}
+
+/* Layout para dispositivos entre 350px y 600px */
+@media (min-width: 350px) and (max-width: 756px) {
+    .services-container {
+        grid-template-columns: 1fr ;
+    }
+.service-card{
+    border-radius: 1rem;
+    border: rgb(255 255 255 /.2) solid 1px;
+}
+.services .tittle{
+    grid-template-columns:1fr;
+}
+.services h2{
+    padding-right:0;
+}
+
+}
+/* Layout para dispositivos entre 350px y 600px */
+@media (min-width: 757px) and (max-width: 1024px) {
+    .services-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+   
+}
+
+/* Layout para dispositivos entre 600px y 1500px */
+@media (min-width: 1025px) and (max-width: 1650px) {
+    .services-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .service-card {
+        text-align: left;
+    }
+    .service-card p {
+        display: block;
+        font-size: 0.9rem;
+    }
+
+    .service-card button {
+        display: inline-block;
+    }
+}
+
+/* Layout para dispositivos mayores de 1500px */
+@media (min-width: 1651px) {
+    .services-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .service-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .service-card p {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    .service-card button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+
+

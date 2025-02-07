@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contenido Desplegable desde Abajo</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      overflow-x: hidden;
+    }
+
+    /* Estilo básico para los enlaces */
+    .link {
+      display: inline-block;
+      margin: 20px;
+      padding: 10px 20px;
+      background-color: #5B00BF;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .link:hover {
+      background-color: #3700b3;
+    }
+
+    /* Estilo para el contenedor del contenido cargado */
+    .container {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+  <script>
+    // Función para cargar contenido externo
+    function loadContent(url) {
+      const contentContainer = document.getElementById('contenido');
+      fetch(url)
+        .then(response => response.text())
+        .then(data => {
+          contentContainer.innerHTML = data;  // Inyectar el contenido cargado
+          document.body.classList.add('loaded'); // Iniciar animación de entrada
+        })
+        .catch(error => {
+          contentContainer.innerHTML = '<p>Error al cargar el contenido.</p>';
+        });
+
+      // Mostrar la página con animación
+      document.body.classList.add('loaded');
+    }
+
+    // Activar la animación de entrada cuando se carga la página
+    window.addEventListener('load', () => {
+      document.body.classList.add('loaded');
+    });
+  </script>
+
+</body>
+</html>

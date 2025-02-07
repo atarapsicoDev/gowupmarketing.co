@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Gowup</title>
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        /* Reset de estilos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            padding: 7.5rem 10%;
+        }
+
+        .services-container {
+            display: grid;
+            gap: 30px; /* Aumentar el gap entre las tarjetas */
+            grid-template-columns: 1fr; /* Por defecto en móvil */
+            padding: 20px;
+        }
+
+        /* Estilo general para cada card */
+        .service-card {
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            text-align: center;
+            cursor: pointer;
+            padding: 1.25rem;
+            text-decoration: none;
+            border: none;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .service-card img {
+            width: 100px; /* Iconos más grandes */
+            height: 100px;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card img:hover {
+            transform: scale(1.1);
+        }
+
+        .service-card h3 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+            color: #213343;
+            font-weight: bold;
+        }
+
+        .service-card p {
+            color: #213343;
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .service-card button {
+            display: inline-block;
+            background: transparent; /* Sin fondo */
+            border: none; /* Sin borde */
+            box-shadow: none; /* Sin sombra */
+            color: #6122B2;
+            text-decoration: none;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .service-card button:hover {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #0056b3;
+        }
+
+        /* Animación de la flecha al hacer hover */
+        .service-card button .bx {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card button:hover .bx {
+            transform: translateX(5px);
+        }
+
+        /* Layout para dispositivos móviles */
+        @media (max-width: 350px) {
+            .services-container {
+                grid-template-columns: 1fr;
+            }
+
+            .service-card p,
+            .service-card button {
+                display: none; /* Solo icono y título */
+            }
+        }
+
+        /* Layout para dispositivos entre 350px y 600px */
+        @media (min-width: 350px) and (max-width: 600px) {
+            .services-container {
+                grid-template-columns: 1fr 1fr;
+            }
+            .service-card p,
+            .service-card button {
+                display: none; /* Solo icono y título */
+            }
+
+           
+        }
+
+        /* Layout para dispositivos entre 600px y 1500px */
+        @media (min-width: 600px) and (max-width: 1650px) {
+            .services-container {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            .service-card {
+                text-align: left;
+            }
+            .service-card p {
+                display: block;
+                font-size: 0.9rem;
+            }
+
+            .service-card button {
+                display: inline-block;
+            }
+        }
+
+        /* Layout para dispositivos mayores de 1500px */
+        @media (min-width: 1651px) {
+            .services-container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .service-card h3 {
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+            }
+
+            .service-card p {
+                font-size: 1rem;
+                margin-bottom: 15px;
+            }
+
+            .service-card button {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="services-container">
+        <!-- Publicidad Digital -->
+        <a class="service-card" href="#">
+            <img src="images/icons/publicidad-digital.svg" alt="Publicidad Digital">
+            <h3>Publicidad Digital</h3>
+            <p>Maximiza tu visibilidad y alcanza a tu audiencia ideal con nuestras campañas publicitarias estratégicas. Utilizamos herramientas avanzadas como Google Ads, Facebook Ads, Instagram Ads y LinkedIn Ads para crear anuncios personalizados que generen resultados tangibles.</p>
+            <button><span>Saber más</span><i class='bx bx-right-arrow-alt'></i></button>
+        </a>
+
+        <!-- Gestión de Redes Sociales -->
+        <a class="service-card" href="#">
+            <img src="images/icons/social-media.svg" alt="Gestión de Redes Sociales">
+            <h3>Gestión de redes sociales</h3>
+            <p>Nuestro equipo está especializado en seleccionar el mensaje adecuado para cada red social y en definir la mejor forma de transmitirlo, siempre adaptándolo a las necesidades de cada cliente.</p>
+            <button><span>Saber más</span><i class='bx bx-right-arrow-alt'></i></button>
+        </a>
+
+        <!-- Email Marketing -->
+        <a class="service-card" href="#">
+            <img src="images/icons/email-marketing.svg" alt="Email Marketing">
+            <h3>Email marketing</h3>
+            <p>Diseñamos e implementamos campañas de email marketing, incorporando análisis de datos para optimizar las tasas de apertura y reducir el porcentaje de rebote.</p>
+            <button><span>Saber más</span><i class='bx bx-right-arrow-alt'></i></button>
+        </a>
+
+        <!-- Contenido Multimedia -->
+        <a class="service-card" href="#">
+            <img src="images/icons/multimedia.svg" alt="Contenido Multimedia">
+            <h3>Contenido multimedia</h3>
+            <p>Transforma tu comunicación digital con recursos visuales impactantes que cautiven a tu audiencia y refuercen tu mensaje. Ofrecemos servicios integrales de producción multimedia.</p>
+            <button><span>Saber más</span><i class='bx bx-right-arrow-alt'></i></button>
+        </a>
+
+        <!-- Diseño Gráfico -->
+        <a class="service-card" href="#">
+            <img src="images/icons/design.svg" alt="Diseño Gráfico">
+            <h3>Diseño gráfico</h3>
+            <p>Desarrollamos logotipos, material corporativo, gráficos para redes sociales y piezas publicitarias que no solo son atractivas, sino también funcionales y alineadas con tus objetivos de negocio.</p>
+            <button><span>Saber más</span><i class='bx bx-right-arrow-alt'></i></button>
+        </a>
+
+        <!-- Diseño Web -->
+        <a class="service-card" href="#">
+            <img src="images/icons/web-design.svg" alt="Diseño Web">
+            <h3>Diseño web</h3>
+            <p>Nos enfocamos en desarrollar páginas que impulsen ventas, integrando optimización SEO, mejora en la velocidad de carga y una experiencia de usuario intuitiva.</p>
+            <button><span>Saber más</span><i class='bx bx-right-arrow-alt'></i></button>
+        </a>
+
+        <!-- Ecommerce -->
+        <a class="service-card" href="#">
+            <img src="images/icons/ecommerce.svg" alt="Comercio electrónico">
+            <h3>Comercio electrónico</h3>
+            <p>Te ayudamos a lanzar tu tienda en línea, con plataformas de pago integradas y soluciones logísticas para que tu negocio opere sin complicaciones.</p>
+            <button><span>Saber más</span><i class='bx bx-right-arrow-alt'></i></button>
+        </a>
+
+        <!-- Inbound Marketing -->
+        <a class="service-card" href="#">
+            <img src="images/icons/inbound-marketing.svg" alt="Inbound Marketing">
+            <h3>Inbound marketing</h3>
+            <p>Diseñamos estrategias que combinan contenido de valor, automatización y análisis de datos para atraer, convertir y fidelizar clientes de manera efectiva.</p>
+            <button><span>Saber más</span><i class='bx bx-right-arrow-alt'></i></button>
+        </a>
+
+        <!-- Marketing de Contenido -->
+        <a class="service-card" href="#">
+            <img src="images/icons/content-marketing.svg" alt="Marketing de contenido">
+            <h3>Marketing de contenido</h3>
+            <p>Creamos estrategias que combinan creatividad y análisis de datos para atraer, educar y fidelizar a tu público, optimizando cada mensaje.</p>
+            <button><span>Saber más</span><i class='bx bx-right-arrow-alt'></i></button>
+        </a>
+
+        <!-- Reputación Online -->
+        <a class="service-card" href="#">
+            <img src="images/icons/certificate.svg" alt="Reputación online">
+            <h3>Reputación online</h3>
+            <p>Desarrollamos estrategias de SEO y creamos contenido optimizado para fortalecer la imagen de tu empresa y generar una percepción positiva.</p>
+            <button><span>Saber más</span><i class='bx bx-right-arrow-alt'></i></button>
+        </a>
+
+        <!-- Consultoría y Estrategia -->
+        <a class="service-card" href="#">
+            <img src="images/icons/consulting.svg" alt="Consultoría y estrategia">
+            <h3>Consultoría y estrategia</h3>
+            <p>Diseñamos estrategias a medida a través de un enfoque integral para fortalecer tu marca y maximizar su impacto.</p>
+            <button><span>Saber más</span><i class='bx bx-right-arrow-alt'></i></button>
+        </a>
+
+        <!-- Gowup Inside -->
+        <a class="service-card" href="#">
+            <img src="images/icons/marketing-growth.svg" alt="Gowup Inside">
+            <h3>Gowup Inside</h3>
+            <p>Una estrategia de marketing interno para fortalecer el sentido de pertenencia y compromiso de los empleados con la empresa.</p>
+            <button><span>Saber más</span><i class='bx bx-right-arrow-alt'></i></button>
+        </a>
+    </div>
+
+</body>
+</html>
